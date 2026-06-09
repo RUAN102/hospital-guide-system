@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --medical-primary: #2471e9;
+  --medical-primary-soft: #eff8ff;
+  --medical-text: #172953;
+  --medical-muted: #5b6b87;
+  --medical-border: #dbeefe;
+  --medical-bg: #f6faff;
+  --medical-line: #dbeefe;
+  --medical-danger: #c0392b;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--medical-bg);
+  color: var(--medical-text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 统一全局文字选择颜色，避免过度干扰 */
+::selection {
+  background-color: #bfe1fe;
+  color: #172953;
+}
+
+/* 为固定顶部导航留出安全区域 */
+body {
+  padding-top: 64px;
+}
+
+/* 滚动时避免默认焦点样式统一 */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+  outline: 2px solid #2471e9;
+  outline-offset: 2px;
+}

@@ -1,0 +1,95 @@
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+interface HomeAction {
+  title: string
+  desc: string
+  to: string
+  tag: string
+}
+
+const router = useRouter()
+
+const actions: HomeAction[] = [
+  {
+    title: '开始导诊',
+    desc: '按症状快速定位科室与医生，完成在线预约',
+    tag: '推荐',
+    to: '/guide',
+  },
+  {
+    title: '科室查询',
+    desc: '查看全院科室列表、主治方向与门诊时间',
+    tag: '科室',
+    to: '/departments',
+  },
+  {
+    title: '医生查询',
+    desc: '按姓名、科室或擅长疾病搜索医生并预约',
+    tag: '医生',
+    to: '/doctors',
+  },
+  {
+    title: '院内导航 & 就医公告',
+    desc: '院区地图、取药/检查指引及最新就医公告',
+    tag: '指引',
+    to: '/navigation',
+  },
+]
+
+function go(to: string) {
+  router.push(to)
+}
+</script>
+
+<template>
+  <section class="mx-auto max-w-5xl px-4 pb-16 pt-8 sm:px-6 sm:pt-12 lg:px-8">
+    <!-- 欢迎语 -->
+    <div
+      class="rounded-xl border border-line bg-white p-6 shadow-card sm:p-8"
+    >
+      <p class="text-sm font-medium text-medical-700">
+        欢迎来到
+      </p>
+      <h1
+        class="mt-1 text-2xl font-semibold text-medical-950 sm:text-3xl"
+      >
+        道臻医疗 · 在线就医服务
+      </h1>
+      <p class="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+        您可以通过下方入口，完成导诊咨询、科室与医生查询，以及查看院内导航与近期公告。如您是首次使用，建议从「开始导诊」进入。
+      </p>
+    </div>
+
+    <!-- 四个功能按钮 -->
+    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <button
+        v-for="item in actions"
+        :key="item.to"
+        type="button"
+        class="flex items-start justify-between gap-4 rounded-xl border border-line bg-white p-5 text-left shadow-card hover:border-medical-400 sm:p-6"
+        @click="go(item.to)"
+      >
+        <div class="flex flex-col">
+          <span
+            class="inline-flex w-fit rounded-md bg-medical-50 px-2 py-0.5 text-[11px] font-medium text-medical-700"
+          >
+            {{ item.tag }}
+          </span>
+          <span class="mt-2 text-base font-semibold text-medical-950">
+            {{ item.title }}
+          </span>
+          <span class="mt-1 text-sm leading-relaxed text-muted">
+            {{ item.desc }}
+          </span>
+        </div>
+        <span
+          class="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-medical-600 text-sm font-semibold text-white"
+          aria-hidden="true"
+        >
+          →
+        </span>
+      </button>
+    </div>
+  </section>
+</template>
