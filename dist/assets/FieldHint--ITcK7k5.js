@@ -1,0 +1,1 @@
+import{E as e,c as t,h as n,l as r,p as i}from"./index-DlrYoQTP.js";var a={key:0,class:`mt-2 text-xs font-medium leading-5 text-danger`,role:`alert`},o=i({__name:`FieldHint`,props:{show:{type:Boolean},text:{}},setup(i){return(o,s)=>i.show?(n(),r(`p`,a,e(i.text||`请先选择对应选项后再继续`),1)):t(``,!0)}});export{o as t};
