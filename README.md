@@ -5,10 +5,11 @@ This template should help get you started developing with Vue 3 and TypeScript i
 Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 # 医院智能导诊系统（Web 端）
 
-> 一个面向普通患者的智能导诊系统，帮助用户根据症状快速匹配科室，导诊模式通俗、随地随地可使用，解决人工导诊需排队不灵活的问题。
+> 一个面向普通患者的智能导诊系统，帮助用户根据症状快速匹配科室，导诊模式通俗、随地随地可使用，解决人工导诊需排队、咨询场景不灵活的问题。
+**项目在线演示：https://hospital-guide-3232356.netlify.app/**
 
 ## 项目简介
-本项目是一款基于 Vue3 + Vite + TypeScript + TailwindCSS 开发的 Web 应用，模拟线下医院分诊流程，实现了从症状选择到科室推荐的全流程导诊功能，适配 PC/移动端响应式展示。
+本项目是一款基于 Vue3 + Vite + TypeScript + TailwindCSS 开发的 Web 应用，模拟线下医院分诊流程，贴合普通人就医认知路径，实现了从症状选择到科室推荐的全流程导诊功能，适配 PC/移动端响应式展示。
 
 ## 核心功能
 多维度导诊：区分体表不适、体内不适、精神/情绪不适三大类
@@ -23,6 +24,7 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 构建工具：Vite
 样式方案：TailwindCSS
 版本控制：Git + GitHub
+线上部署：Netlify
 
 ##  本地运行
 ```bash
